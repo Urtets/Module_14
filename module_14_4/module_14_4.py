@@ -77,17 +77,6 @@ async def send_calories(message, state):
     await state.finish()
 
 
-# @dp.message_handler(text='Купить')
-# async def get_buying_list(message: types.Message):
-#     with open('imgs/Luminous Capsule Presentation.jpeg', 'rb') as img:
-#         await message.answer_photo(img, stomach_reducer)
-#     with open('imgs/Turbotext AI Image 5998295.png', 'rb') as img:
-#         await message.answer_photo(img, butt_reducer)
-#     with open('imgs/Clear Plastic Bottle with Capsules.jpeg', 'rb') as img:
-#         await message.answer_photo(img, side_reducer)
-#     with open('imgs/Wellness Supplements Assortment on Wooden Backdrop.jpeg', 'rb') as img:
-#         await message.answer_photo(img, arm_reducer, reply_markup=inline_menu)
-
 @dp.message_handler(text='Купить')
 async def get_buying_list(message: types.Message):
     product_list = crud_functions.get_all_products()
